@@ -36,7 +36,7 @@ $row=$ru->fetch_assoc();
 <center><div><main><table >
   <tr>
   <th colspan="2">	<br>
-<h1><P>MODIFICAR DATOS DEL AUTOR</FONT></P></h1>
+<h1><P>MODIFICAR DATOS DE LA EDITORIAL</FONT></P></h1>
   </th>
 </tr>
 <FORM action="../actions/modiEdi.php?id=<?php echo $row['id_edi']; ?>" 
