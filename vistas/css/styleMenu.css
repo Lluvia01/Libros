@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.header {
+  padding: 0px;
+  overflow: auto;
+  text-align: center;
+  background: rgba(248, 19, 191, 0.5);
+  color: black;
+  margin:auto;
+  line-height:20px;
+  font-family: Time New Roman;
+}
+
+nav{
+  list-style-type: none;
+  overflow: auto; 
+    margin: auto;
+    position: fixed;
+    top: 70px;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-color:rgb(164, 43, 168);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color:#FE2E64;
+  width: 100%;
+}
+
+h2{
+  overflow: auto;
+  text-align: center;
+  font-size: xx-large;
+}
+h3{
+  overflow: auto;
+  text-align: center;
+  font-size: xx-large;
+  
+}
+a{
+  display: inline-block;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
+.busc:hover{
+  color: #fe2e2e;
+}
+
+.leer{
+  position: fixed;
+  top: 30%;
+  right: 5%;
+  width: 30%;
+}

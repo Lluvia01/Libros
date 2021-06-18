@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffeac;
+background-image: url(../img/libros.png);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+.loginbox {
+  width:280px;
+  height:330px;
+  background: rgba(255, 235, 170, 0.5);
+  color:black;
+  top: 32%;  
+  left: 40%; 
+  position: absolute;
+  transform: fixed;
+  box-sizing: border-box;
+  padding: 50px 30px;
+  margin:auto;
+}
+
+.loginbox h1 {
+  margin: 0;	
+  color: black;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.loginbox input {
+  width:100%;
+  margin-bottom:0px;
+}
+
+.loginbox input[type="text"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.loginbox input[type="password"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.loginbox input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 50%;
+  background: #F0FFAA;
+  color: #000;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover {
+  cursor: pointer;
+  background: #FFD489;
+  color: #000;
+}
