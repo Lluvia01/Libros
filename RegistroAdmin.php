@@ -18,10 +18,15 @@
     <label for="Apellido_Padmin">Apellido Paterno</label>
     <input type="text" name="Apellido_Padmin"  placeholder="Ingrese su Apellido">
     <label for="Apellido_Madmin">Apellido Materno</label>
-    <input type="text" name="Apellido_Madmin"  placeholder="Ingrese su Apellido">
+    <input type="text" name="Apellido_Madmin"  placeholder="Ingrese su Apellido"><br>
     <label for="email">Correo</label>
     <input type="email" name="Correo_Admin"  placeholder="Ingrese su Correo">
 
+    <label for="NumTelefono">Numero telefonico</label>
+    <input type="text" name="NumTelefono"  placeholder="Ingrese su Numero telefonico">
+    <label for="password">Contraseña</label>
+    <input type="password" name="password"  required placeholder="Ingresa tu contrase&ntilde;a"><br><br>
+<br>
     <input type="submit" value="Registrar">
     <p><a href="Login.php">Ya tengo Cuenta</a></p>
   </form>
