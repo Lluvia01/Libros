@@ -24,8 +24,10 @@ if($resultado){
 	$insertUsuario = "INSERT INTO `usuario`(`control`, `password_Usua`, `Nivel`) VALUES ('$No_admin','$password','1' )";
 	$resultado2 = mysqli_query($conexion,$insertUsuario);
 	header('Location: Login.php');
-	    }else{
-		echo "<script>alert('Correo invalido');</script>";
-	}
-}
+	    }
+}else{
+       $errorLogin = "<script>alert('Correo invalido');</script>";
+
+        include_once 'RegistroAdmin.php';
+    }
 ?>

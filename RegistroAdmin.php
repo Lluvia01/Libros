@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="vistas/css/styleLog1.css">
+  <link rel="stylesheet" type="text/css" href="vistas/css/styleLog.css">
   <title>Formulario Registro</title>
 </head>
 <body>
@@ -29,6 +29,13 @@
 <br>
     <input type="submit" value="Registrar">
     <p><a href="Login.php">Ya tengo Cuenta</a></p>
+    <?php
+if(isset($errorLogin)){
+  echo $errorLogin;
+//print '<script language="JavaScript">'; 
+//print 'alert("USUARIO Y/O CONTRASEÑA INCORRECTA");'; 
+//print '</script>'; 
+ } ?>
   </form>
 </div>
 </body>
