@@ -1,29 +1,109 @@
+
 <!DOCTYPE html>
 <html>
+
+
+
+
+<style>
+ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ header{
+   background-color: #F9F8FC;
+ }
+
+ #logo{
+   margin: auto;
+   height: 250px;
+   width: 320px;
+   text-align: center;
+ }
+
+ #logo h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 58px;
+  }
+
+nav{
+  height: 60px;
+  background-color:#17181C;
+  text-align: center;
+}
+
+nav ul{
+   list-style: none;
+   display: inline-block;
+   padding:18px;
+}
+
+nav ul li{
+    float: left;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+}
+
+nav ul li a:hover{
+  background-color: #929fb3;
+}
+
+</style>
+
+
+
+
+
+
 <head>
-	<title>Prestamo de libros</title>
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>Libros del rincon</title>
+	<title>Agregar libro</title>
 	<link rel="stylesheet" type="text/css" href="css/styleMenu.css">
     <link rel="stylesheet" type="text/css" href="css/animacion.css">
     <link rel="stylesheet" type="text/css" href="css/tabla.css">
     <script type="text/javascript" src="../actions/funciones.js"></script>
 </head>
-<body>
-	<div class="header">
-	<h1><a href="principal.php">Libros del Rincón</a></h1></div>
-  <br><H2>Prestamo de libro</H2>
-<nav><ul>
-  <li class="dropdown">
-    <a href="AgregarL.php" class="dropbtn" >AGREGAR LIBRO</a>
 
-  </li>
-  <li class="dropdown">
-    <a href="../buscarLib.php" class="dropbtn" target="_blank">BUSCAR LIBRO</a>
-    
-  </li>
-  <li class="dropdown">
-    <a href="#" class="dropbtn">PRESTAMOS</a>
-  </li>
-</li></ul></nav>
+<body>
+  
+<header>
+
+
+
+     <div id="logo">
+     <h1><a href="principal.php">Libros del Rincón</a></h1></div>
+     </div>
+
+
+        
+     </div>
+     <nav>
+       <ul>
+         <li><a href="AgregarL.php">AGREGAR LIBRO</a></li>
+         <li><a href="buscarLib.php">BUSCAR LIBRO</a></li>
+         <li><a href="prestamo.php">PRESTAMOS</a></li>
+         <li><a href=<a onclick="ConfirmDemo()">CERRAR SESION</a></li>
+       </ul>
+     </nav>
+   </header>
+
+
+
+
+
+
     
 <center><table >
 <form action="../actions/prest.php" method="POST">
@@ -67,7 +147,7 @@
 </tr>
 </table></center>
 </form>
-<button class="button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Ingresar alumno</button><br>
+<button class="button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Ingresar alumno</button>
 	<div id="id01" class="modal">  
   <form action="../actions/AgregarAlu.php" method="post">
   <div class="imgcontainer">
@@ -75,17 +155,20 @@
     </div>
     <div class="container" style="background-color:#f1f1f1">
       <label for="Nom"><b>Nombre (s)</b></label>
-      <input type="text" placeholder="Ingresa nombre" name="Nom" required><br>
+      <input type="text" placeholder="Ingresa nombre" name="Nom" required>
       <label for="ApeP"><b>Apellido Paterno</b></label>
-      <input type="text" placeholder="Ingresa apellido paterno" name="ApeP" required><br>
+      <input type="text" placeholder="Ingresa apellido paterno" name="ApeP" required>
 	  <label for="ApeM"><b>Apellido Materno</b></label>
-      <input type="text" placeholder="Ingresa apellido materno" name="ApeM" required><br>
+      <input type="text" placeholder="Ingresa apellido materno" name="ApeM" required>
 	  <label for="gyg"><b>Grado y grupo</b></label>
-      <input type="text" placeholder="Ingresa grado y grupo" name="gyg" required><br>        
-      <button type="submit" onclick="ConfirmAlu()">Enviar</button><br></form>
+      <input type="text" placeholder="Ingresa grado y grupo" name="gyg" required>      
+      <button type="submit" onclick="ConfirmAlu()">Enviar</button></form>
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
     </div>  
-</div><br>
-<button class="button2" onclick="Pres()" style="width:auto;">Libros prestados</button><br>
+</div>
+<button class="button2" onclick="Pres()" style="width:auto;">Libros prestados</button>
 </body>
 </html>
+<div id="logo">
+        <img src="img/JuanREscudero.png">
+

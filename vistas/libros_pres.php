@@ -30,7 +30,7 @@ $rows = $res->num_rows;
   </li>
 </ul>
 </nav>
-<br><br>
+
 <center><p><FONT SIZE=6>Libros prestados:</font></p></center>
 <main>
   <?php if($rows > 0) { ?>

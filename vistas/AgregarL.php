@@ -1,31 +1,119 @@
 <?php 
 include_once '../conexion.php';    
 ?>
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
+
+
+
+
+<style>
+ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ header{
+   background-color: #F9F8FC;
+ }
+
+ #logo{
+   margin: auto;
+   height: 250px;
+   width: 320px;
+   text-align: center;
+ }
+
+ #logo h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 58px;
+  }
+
+nav{
+  height: 60px;
+  background-color:#17181C;
+  text-align: center;
+}
+
+nav ul{
+   list-style: none;
+   display: inline-block;
+   padding:18px;
+}
+
+nav ul li{
+    float: left;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+}
+
+nav ul li a:hover{
+  background-color: #929fb3;
+}
+
+</style>
+
+
+
+
+
+
 <head>
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>Libros del rincon</title>
 	<title>Agregar libro</title>
 	<link rel="stylesheet" type="text/css" href="css/styleMenu.css">
     <link rel="stylesheet" type="text/css" href="css/animacion.css">
     <link rel="stylesheet" type="text/css" href="css/tabla.css">
     <script type="text/javascript" src="../actions/funciones.js"></script>
 </head>
-<body>
-	<div class="header">
-	<h1><a href="principal.php">Libros del Rincón</a></h1></div>
-  <br><H2>Agregar libro</H2>
-<nav><ul>
-  <li class="dropdown">
-    <a href="AgregarL.php" class="dropbtn">AGREGAR LIBRO</a>
 
-  </li>
-  <li class="dropdown">
-    <a href="../buscarLib.php" class="dropbtn">BUSCAR LIBRO</a>
-    
-  </li>
-  <li class="dropdown">
-    <a href="prestamo.php" class="dropbtn">PRESTAMOS</a>
-  </li>
+<body>
+  
+<header>
+
+
+
+     <div id="logo">
+     <h1><a href="principal.php">Libros del Rincón</a></h1></div>
+     </div>
+
+
+        
+     </div>
+     <nav>
+       <ul>
+         <li><a href="AgregarL.php">AGREGAR LIBRO</a></li>
+         <li><a href="buscarLib.php">BUSCAR LIBRO</a></li>
+         <li><a href="prestamo.php">PRESTAMOS</a></li>
+         <li><a href=<a onclick="ConfirmDemo()">CERRAR SESION</a></li>
+       </ul>
+     </nav>
+   </header>
+
+
+
+
+
+
 </li></ul></nav>
     
 <center><table >
@@ -78,7 +166,7 @@ include_once '../conexion.php';
       <button type="submit" onclick="ConfirmAuto()">Enviar</button><br></form>
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
     </div>  
-</div><br>
+</div>
 <button class="button2" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Ingresar editorial</button><br>
 	<div id="id02" class="modal">
   <form action="../actions/agregarEdi.php" method="post">
@@ -92,6 +180,11 @@ include_once '../conexion.php';
       <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
-</div><br>
+</div>
 </body>
 </html>
+<div id="logo">
+        <img src="img/JuanREscudero.png">
+
+
+

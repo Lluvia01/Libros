@@ -30,7 +30,7 @@ $rows = $res->num_rows;
   </li>
 </ul>
 </nav>
-<br><br>  
+  
 <center><p><FONT SIZE=6>RESULTADOS DE BUSQUEDA:</font></p></center>
 <main>
   <?php if($rows > 0) { ?>
