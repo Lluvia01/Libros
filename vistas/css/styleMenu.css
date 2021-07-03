@@ -1,80 +1,54 @@
-* {
-  box-sizing: border-box;
-}
-body{
-  background-color: rgba(255, 255, 255, 0.7);
-}
-.header {
-  padding: 0px;
-  overflow: auto;
-  text-align: center;
-  background: rgba(248, 19, 191, 0.5);
-  color: black;
-  margin:auto;
-  line-height:20px;
-  font-family: Time New Roman;
-}
-
-nav{
-  list-style-type: none;
-  overflow: auto; 
-    margin: auto;
-    position: fixed;
-    top: 70px;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    background-color:rgb(164, 43, 168);
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-li {
-  float: left;
-}
-
-li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-  background-color:#FE2E64;
-  width: 100%;
-}
-
-h2{
-  overflow: auto;
-  text-align: center;
-  font-size: xx-large;
-}
-h3{
-  overflow: auto;
-  text-align: center;
-  font-size: xx-large;
-  
-}
-a{
-  display: inline-block;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-}
-
-.busc:hover{
-  color: #fe2e2e;
-}
-
-.leer{
-  position: fixed;
-  top: 30%;
-  right: 5%;
-  width: 30%;
-}
+*{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+ 
+      header{
+        background-color: #F9F8FC;
+      }
+ 
+      #logo{
+        margin: auto;
+        height: 200px;
+        width: 320px;
+        text-align: center;
+      }
+ 
+      #logo h1{
+         font-family: 'Pacifico', cursive;
+         font-size: 58px;
+       }
+       h2{font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    text-align: center;}
+ 
+     nav{
+       height: 60px;
+       background-color:#17181C;
+       text-align: center;
+     }
+ 
+     nav ul{
+        list-style: none;
+        display: inline-block;
+        padding:18px;
+     }
+ 
+     nav ul li{
+         float: left;
+         margin-top: 20px;
+     }
+ 
+     nav ul li a {
+         color: white;
+         font-weight: bold;
+         text-decoration: none;
+         font-size: 20px;
+         padding: 18px;
+     }
+ 
+     nav ul li a:hover{
+       background-color: #929fb3;
+     }
+    a{text-decoration: none;}

@@ -1,19 +1,10 @@
 <?php 
-include_once '../conexion.php';    
+include_once '../conexion.php';
+$consulta=mysqli_query($conexion, "SELECT * FROM autor"); 
+$consulta2=mysqli_query($conexion, "SELECT * FROM editorial");    
 ?>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
-
-
-
 
 <style>
  
@@ -29,7 +20,7 @@ include_once '../conexion.php';
 
  #logo{
    margin: auto;
-   height: 250px;
+   height: 200px;
    width: 320px;
    text-align: center;
  }
@@ -70,17 +61,11 @@ nav ul li a:hover{
 
 </style>
 
-
-
-
-
-
 <head>
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <title>Libros del rincon</title>
-	<title>Agregar libro</title>
-	<link rel="stylesheet" type="text/css" href="css/styleMenu.css">
+
     <link rel="stylesheet" type="text/css" href="css/animacion.css">
     <link rel="stylesheet" type="text/css" href="css/tabla.css">
     <script type="text/javascript" src="../actions/funciones.js"></script>
@@ -89,30 +74,20 @@ nav ul li a:hover{
 <body>
   
 <header>
-
-
-
      <div id="logo">
-     <h1><a href="principal.php">Libros del Rincón</a></h1></div>
+     <a href="principal.php"><h1>Libros del Rincón</a></h1></div>
      </div>
-
-
-        
+   
      </div>
      <nav>
        <ul>
          <li><a href="AgregarL.php">AGREGAR LIBRO</a></li>
-         <li><a href="buscarLib.php">BUSCAR LIBRO</a></li>
+         <li><a href="../buscarLib.php">BUSCAR LIBRO</a></li>
          <li><a href="prestamo.php">PRESTAMOS</a></li>
-         <li><a href=<a onclick="ConfirmDemo()">CERRAR SESION</a></li>
+         <li><a onclick="ConfirmDemo()">CERRAR SESION</a></li>
        </ul>
      </nav>
    </header>
-
-
-
-
-
 
 </li></ul></nav>
     
@@ -130,8 +105,13 @@ nav ul li a:hover{
 	<td class=a>
 	<br><FONT  SIZE=6>Autor:</font>
 	</td>
-  <td><input type="number" name="id_autor" minlength="1" maxlength="15" 
-		pattern="[0-9]+" required placeholder="Id autor"><br>
+  <td>
+    <select name="id_autor">
+    <option>seleccione autor</option>
+    <?php while($datos=mysqli_fetch_array($consulta)){?>
+    <option value="<?php echo $datos['id_autor']?>"><?php echo $datos['Nombre_au']; echo ' '; echo $datos['apellido_au']?></option>
+  <?php } ?>
+    </select><br>
     <a href="buscAu.php" class="busc" target="_blank">Buscar autor</a>
 	</td>  
 </tr>
@@ -139,8 +119,12 @@ nav ul li a:hover{
 	<td class=a>
 	<br><FONT  SIZE=6>Editorial:</font>
   </td>  
-  <td><input type="number" name="id_edi" minlength="5" maxlength="15" 
-		pattern="[0-9]+" required placeholder="Id editorial"><br>
+  <td><select name="id_edi">
+    <option>seleccione editorial</option>
+    <?php while($dato=mysqli_fetch_array($consulta2)){?>
+    <option value="<?php echo $dato['id_edi']?>"><?php echo $dato['Nombre_edi']?></option>
+  <?php } ?>
+    </select><br>
 	<a href="buscarEdi.php" class="busc" target="_blank">Buscar editorial</a>
   </td>
 </tr>
@@ -183,8 +167,7 @@ nav ul li a:hover{
 </div>
 </body>
 </html>
-<div id="logo">
-        <img src="img/JuanREscudero.png">
+
 
 
 

@@ -10,15 +10,19 @@ $row=$ru->fetch_assoc();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Buscar</title>
+	<title>Libros del rincon</title>
 <link rel="stylesheet" type="text/css" href="../vistas/css/styleMenu.css">
   <link rel="stylesheet" type="text/css" href="../vistas/css/tabla.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <script type="text/javascript" src="../actions/funciones.js"></script>
 </head>
 <body>
-	<div class="header">
-	<h1><a href="principal.php">Libros del Rincón</a></h1></div>
-	<nav><ul>
+	<header>
+
+     <div id="logo">
+     <h1><a href="principal.php">Libros del Rincón</a></h1></div>
+     </div>
+  <nav><ul>
   <li class="dropdown">
     <a href="AgregarL.php" class="dropbtn">AGREGAR LIBRO</a>
 
@@ -33,12 +37,9 @@ $row=$ru->fetch_assoc();
 </ul>
 </nav>
 
-<center><div><main><table >
-  <tr>
-  <th colspan="2">	<br>
-<h1><P>MODIFICAR DATOS DEL AUTOR</FONT></P></h1>
-  </th>
-</tr>
+<center><p><h2>MODIFICAR DATOS DEL AUTOR</h2></p>
+
+  <div><main><table >
 <FORM action="../actions/modiAU.php?id=<?php echo $row['id_autor']; ?>" 
 	method="POST"enctype="multipart/form-data">
 

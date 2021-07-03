@@ -10,17 +10,21 @@ $row=$ru->fetch_assoc();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Buscar</title>
+	<title>Libros del rincon</title>
 <link rel="stylesheet" type="text/css" href="../vistas/css/styleMenu.css">
   <link rel="stylesheet" type="text/css" href="../vistas/css/tabla.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
   <script type="text/javascript" src="../actions/funciones.js"></script>
 </head>
 <body>
-	<div class="header">
-	<h1><a href="principal.php">Libros del Rincón</a></h1></div>
-	<nav><ul>
+	<header>
+
+     <div id="logo">
+     <h1><a href="principal.php">Libros del Rincón</a></h1></div>
+     </div>
+  <nav><ul>
   <li class="dropdown">
-    <a href="../vistas/AgregarL.php" class="dropbtn">AGREGAR LIBRO</a>
+    <a href="AgregarL.php" class="dropbtn">AGREGAR LIBRO</a>
 
   </li>
   <li class="dropdown">
@@ -28,17 +32,13 @@ $row=$ru->fetch_assoc();
     
   </li>
   <li class="dropdown">
-    <a href="../vistas/prestamo.php" class="dropbtn">PRESTAMOS</a>
+    <a href="prestamo.php" class="dropbtn">PRESTAMOS</a>
   </li>
 </ul>
 </nav>
 
-<center><div><main><table >
-  <tr>
-  <th colspan="2">	<br>
-<h1><P>MODIFICAR DATOS DEL AUTOR</FONT></P></h1>
-  </th>
-</tr>
+<center><p><h2>MODIFICAR DATOS DE LA EDITORIAL</h2></p>
+  <div><main><table >
 <FORM action="../actions/modiEdi.php?id=<?php echo $row['id_edi']; ?>" 
 	method="POST"enctype="multipart/form-data">
 

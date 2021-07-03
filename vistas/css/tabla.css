@@ -2,6 +2,7 @@ table, th, td
 {
 width:50%;
 text-align: center;
+align-content: center;
 }
 
 .formulario{

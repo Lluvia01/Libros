@@ -1,10 +1,9 @@
-
+<?php 
+include_once '../conexion.php';
+$consulta=mysqli_query($conexion, "SELECT * FROM alumnos ORDER BY Apellido_P");    
+?>
 <!DOCTYPE html>
 <html>
-
-
-
-
 <style>
  
  *{
@@ -19,7 +18,7 @@
 
  #logo{
    margin: auto;
-   height: 250px;
+   height: 200px;
    width: 320px;
    text-align: center;
  }
@@ -59,18 +58,10 @@ nav ul li a:hover{
 }
 
 </style>
-
-
-
-
-
-
 <head>
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <meta charset="utf-8" />
     <title>Libros del rincon</title>
-	<title>Agregar libro</title>
-	<link rel="stylesheet" type="text/css" href="css/styleMenu.css">
     <link rel="stylesheet" type="text/css" href="css/animacion.css">
     <link rel="stylesheet" type="text/css" href="css/tabla.css">
     <script type="text/javascript" src="../actions/funciones.js"></script>
@@ -80,31 +71,21 @@ nav ul li a:hover{
   
 <header>
 
-
-
      <div id="logo">
      <h1><a href="principal.php">Libros del Rincón</a></h1></div>
      </div>
-
-
-        
+    
      </div>
      <nav>
        <ul>
          <li><a href="AgregarL.php">AGREGAR LIBRO</a></li>
-         <li><a href="buscarLib.php">BUSCAR LIBRO</a></li>
+         <li><a href="../buscarLib.php">BUSCAR LIBRO</a></li>
          <li><a href="prestamo.php">PRESTAMOS</a></li>
-         <li><a href=<a onclick="ConfirmDemo()">CERRAR SESION</a></li>
+         <li><a onclick="ConfirmDemo()">CERRAR SESION</a></li>
        </ul>
      </nav>
    </header>
-
-
-
-
-
-
-    
+   
 <center><table >
 <form action="../actions/prest.php" method="POST">
 <tr>
@@ -117,10 +98,14 @@ nav ul li a:hover{
 </tr>
 <tr>
 	<td class=a>
-	<br><FONT  SIZE=6>Id Alumno:</font>
+	<br><FONT  SIZE=6>Alumno:</font>
 	</td>
-  <td><input type="number" name="id_alumno" minlength="1" maxlength="15" 
-		pattern="[0-9]+" required placeholder="Id alumno"><br>
+  <td><select name="id_alumno">
+    <option>seleccione alumno</option>
+    <?php while($datos=mysqli_fetch_array($consulta)){?>
+    <option value="<?php echo $datos['No_alu']?>"><?php echo $datos['Apellido_P']; echo ' '; echo $datos['Apellido_M']; echo ' '; echo $datos['Nombre_alu'] ?></option>
+  <?php } ?>
+    </select><br>
     <a href="buscar_alu.php" class="busc" target="_blank">Buscar alumno</a>
 	</td>  
 </tr>
@@ -155,13 +140,13 @@ nav ul li a:hover{
     </div>
     <div class="container" style="background-color:#f1f1f1">
       <label for="Nom"><b>Nombre (s)</b></label>
-      <input type="text" placeholder="Ingresa nombre" name="Nom" required>
+      <input type="text" placeholder="Ingresa nombre" name="Nom" required><br>
       <label for="ApeP"><b>Apellido Paterno</b></label>
-      <input type="text" placeholder="Ingresa apellido paterno" name="ApeP" required>
+      <input type="text" placeholder="Ingresa apellido paterno" name="ApeP" required><br>
 	  <label for="ApeM"><b>Apellido Materno</b></label>
-      <input type="text" placeholder="Ingresa apellido materno" name="ApeM" required>
+      <input type="text" placeholder="Ingresa apellido materno" name="ApeM" required><br>
 	  <label for="gyg"><b>Grado y grupo</b></label>
-      <input type="text" placeholder="Ingresa grado y grupo" name="gyg" required>      
+      <input type="text" placeholder="Ingresa grado y grupo" name="gyg" required><br>      
       <button type="submit" onclick="ConfirmAlu()">Enviar</button></form>
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
     </div>  
@@ -169,6 +154,4 @@ nav ul li a:hover{
 <button class="button2" onclick="Pres()" style="width:auto;">Libros prestados</button>
 </body>
 </html>
-<div id="logo">
-        <img src="img/JuanREscudero.png">
 

@@ -9,14 +9,18 @@ $rows = $res->num_rows;
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Buscar</title>
+	<title>Libros del rincon</title>
 <link rel="stylesheet" type="text/css" href="css/styleMenu.css">
   <link rel="stylesheet" type="text/css" href="css/tabla.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="header">
-	<h1><a href="principal.php">Libros del Rincón</a></h1></div>
-	<nav><ul>
+	<header>
+
+     <div id="logo">
+     <h1><a href="principal.php">Libros del Rincón</a></h1></div>
+     </div>
+  <nav><ul>
   <li class="dropdown">
     <a href="AgregarL.php" class="dropbtn">AGREGAR LIBRO</a>
 
@@ -31,7 +35,7 @@ $rows = $res->num_rows;
 </ul>
 </nav>
 
-<center><p><FONT SIZE=6>RESULTADOS DE BUSQUEDA:</font></p></center>
+<center><p><h2>RESULTADOS DE BUSQUEDA:</h2></p>
 <main>
   <?php if($rows > 0) { ?>
    <table align="center">
@@ -68,7 +72,7 @@ $rows = $res->num_rows;
 }}</script>
         </tr>
         <?php } ?>
-        </tbody></table><br><br>
+        </tbody></table></center><br><br>
 
 <?php } else { ?>
     <br><center><h1>NO SE ENCONTRARON ALUMNOS</h1></center><br><br>
